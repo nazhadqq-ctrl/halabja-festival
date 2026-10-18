@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang=ckb dir=rtl>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content=width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no>
+    <title>ڕێبەری هاتوچۆی فیستڤاڵی هەنار - هەڵەبجە ٢٠٢٦</title>
+    
+    <!-- Meta tags for social media previews (WhatsApp, Telegram, Facebook) -->
+    <meta name=description content=ڕێبەری هاتوچۆ و ئاڕاستەکانی فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦ - هێڵی شین بۆ چوون، هێڵی سوور بۆ گەڕانەوە لەگەڵ پارکینی ئۆتۆمبێل>
+    <meta property=og:title content=ڕێبەری هاتوچۆی فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦>
+    <meta property=og:description content=کردنەوەی ئۆتۆماتیکی لە Google Maps, Waze, و Apple Maps>
+    <meta property=og:image content=1_Posteri_Reber_2026.jpg>
+    <meta property=og:type content=website>
+    <meta name=theme-color content=#881337>
+
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link href=https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap rel=stylesheet>
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #151d2f;
+            --blue-grad: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+            --red-grad: linear-gradient(135deg, #b91c1c, #7f1d1d);
+            --pomegranate: #e11d48;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gold: #fbbf24;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 12px 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Header */
+        .header-card {
+            background: linear-gradient(145deg, #881337 0%, #4c0519 100%);
+            border-radius: 28px;
+            padding: 32px 24px 28px;
+            text-align: center;
+            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffe4e6;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #fecdd3;
+            line-height: 1.5;
+        }
+
+        /* Route Card */
+        .route-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 24px 20px;
+            border: 2px solid transparent;
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: transform 0.2s;
+        }
+
+        .route-card.blue {
+            border-color: #3b82f6;
+            background: linear-gradient(160deg, #132347 0%, #0d172c 100%);
+        }
+
+        .route-card.red {
+            border-color: #ef4444;
+            background: linear-gradient(160deg, #3d1418 0%, #1a0a0d 100%);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .icon-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .blue .icon-circle {
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid #3b82f6;
+        }
+
+        .red .icon-circle {
+            background: rgba(239, 68, 68, 0.25);
+            border: 1px solid #ef4444;
+        }
+
+        .card-heading h2 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .card-heading p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* App Navigation Buttons */
+        .app-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .app-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 14px 8px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .app-btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-gmaps { background: linear-gradient(145deg, #10b981, #047857); }
+        .btn-waze  { background: linear-gradient(145deg, #0ea5e9, #0369a1); }
+        .btn-apple { background: linear-gradient(145deg, #475569, #1e293b); }
+
+        .app-btn span.emoji {
+            font-size: 20px;
+        }
+
+        /* Parking info banner */
+        .info-card {
+            background: #111e17;
+            border: 1px solid #10b981;
+            border-radius: 20px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d1fae5;
+        }
+
+        .info-icon {
+            font-size: 30px;
+            flex-shrink: 0;
+        }
+
+        /* Poster Preview */
+        .poster-section {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .poster-section h3 {
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--gold);
+        }
+
+        .poster-img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .poster-img:hover {
+            opacity: 0.95;
+        }
+
+        /* Share Bar */
+        .share-bar {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .share-whatsapp { background: #25d366; }
+        .share-telegram { background: #229ed9; }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class=container>
+    <!-- Header -->
+    <header class=header-card>
+        <div class=badge>پارێزگای هەڵەبجە - ٢٠٢٦ 🌸</div>
+        <h1 class=title>ڕێبەری هاتوچۆی فیستڤاڵی هەنار</h1>
+        <p class=subtitle>تکایە ئاڕاستەی مەبەست هەڵبژێرە بۆ کردنەوەی ڕاستەوخۆ لە نەخشە</p>
+    </header>
+
+    <!-- Blue Route (Arrival) -->
+    <section class=route-card blue>
+        <div class=card-top>
+            <div class=icon-circle>🔵</div>
+            <div class=card-heading>
+                <h2>هێڵی شین: ڕۆیشتن بەرەو فیستڤاڵ</h2>
+                <p>ڕێگای هاتنەژوورەوە لە خورماڵ و سیروان بەرەو شوێنی فیستڤاڵ (پارکی شار و یاریگا)</p>
+            </div>
+        </div>
+
+        <div class=app-buttons>
+            <a href=https://www.google.com/maps/dir/?api=1&destination=35.1762,45.9865&travelmode=driving class=app-btn btn-gmaps target=_blank rel=noopener>
+                <span class=emoji>🗺️</span>
+                Google Maps
+            </a>
+            <a href=https://waze.com/ul?ll=35.1762,45.9865&navigate=yes class=app-btn btn-waze target=_blank rel=noopener>
+                <span class=emoji>🚗</span>
+                Waze
+            </a>
+            <a href=https://maps.apple.com/?daddr=35.1762,45.9865&dirflg=d class=app-btn btn-apple target=_blank rel=noopener>
+                <span class=emoji>🍏</span>
+                Apple Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- Red Route (Exit / Departure) -->
+    <section class=route-card red>
+        <div class=card-top>
+            <div class=icon-circle>🔴</div>
+            <div class=card-heading>
+                <h2>هێڵی سوور: دەرچوون و گەڕانەوە</h2>
+                <p>دەرچوون بە شەقامی گەڕەکی بامۆک بەرەو سلێمانی و شارەزوور (یەک ئاڕاستە)</p>
+            </div>
+        </div>
+
+        <div class=app-buttons>
+            <a href=https://www.google.com/maps/dir/?api=1&destination=35.1630,45.9870&travelmode=driving class=app-btn btn-gmaps target=_blank rel=noopener>
+                <span class=emoji>🗺️</span>
+                Google Maps
+            </a>
+            <a href=https://waze.com/ul?ll=35.1630,45.9870&navigate=yes class=app-btn btn-waze target=_blank rel=noopener>
+                <span class=emoji>🚗</span>
+                Waze
+            </a>
+            <a href=https://maps.apple.com/?daddr=35.1630,45.9870&dirflg=d class=app-btn btn-apple target=_blank rel=noopener>
+                <span class=emoji>🍏</span>
+                Apple Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- Parking Advice -->
+    <div class=info-card>
+        <div class=info-icon>🅿️</div>
+        <div>
+            <strong>تێبینی گرنگ دەربارەی پارکینگ:</strong>
+            تکایە ئۆتۆمبێلەکانتان لە گۆڕەپانەکانی پارکینگی دیاریکراو ڕابگرن بۆ ئەوەی ڕێگای هاتووچۆ ئاستەنگ نەبێت.
+        </div>
+    </div>
+
+    <!-- Official Poster -->
+    <div class=poster-section>
+        <h3>نەخشەی ڕێبەری فەرمی ٢٠٢٦</h3>
+        <a href=1_Posteri_Reber_2026.jpg target=_blank>
+            <img src=1_Posteri_Reber_2026.jpg alt=نەخشەی فیستڤاڵی هەناری هەڵەبجە class=poster-img>
+        </a>
+    </div>
+
+    <!-- Share Buttons -->
+    <div class=share-bar>
+        <a href=https://api.whatsapp.com/send?text=%D8%B1%D9%8E%DB%8C%D8%A8%D9%8E%D8%B1%DB%8C%20%D9%87%D8%A7%D8%AA%D9%88%DA%86%DB%8Blob%D8%B1%DB%8C%20%D9%81%DB%8C%D8%B3%D8%AA%DA%A4%D8%A7%DA%B5%DB%8C%20%D9%87%DB%8E%D9%86%D8%A7%D8%B1%20%D9%87%DB%8E%DA%B5%D9%8E%D8%A8%D8%AC%D9%8E%20%DB%B2%DB%B0%DB%B2%DB%B6%20https://nazhadqq-ctrl.github.io/halabja-festival class=share-btn share-whatsapp target=_blank rel=noopener>
+            📱 ناردن بۆ WhatsApp
+        </a>
+        <a href=https://t.me/share/url?url=https://nazhadqq-ctrl.github.io/halabja-festival&text=%D8%B1%D9%8E%DB%8C%D8%A8%D9%8E%D8%B1%DB%8C%20%D9%87%D8%A7%D8%AA%D9%88%DA%86%DB%8Blob%D8%B1%DB%8C%20%D9%81%DB%8C%D8%B3%D8%AA%DA%A4%D8%A7%DA%B5%DB%8C%20%D9%87%DB%8E%D9%86%D8%A7%D8%B1%20%D9%87%DB%8E%DA%B5%D9%8E%D8%A8%D8%AC%D9%8E class=share-btn share-telegram target=_blank rel=noopener>
+            ✈️ ناردن بۆ Telegram
+        </a>
+    </div>
+
+    <footer>
+        فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦ • بەخێربێن بۆ شاری هەنار
+    </footer>
+</div>
+
+</body>
+</html>
