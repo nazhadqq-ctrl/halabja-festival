@@ -8,7 +8,7 @@
     <!-- Meta tags for social media -->
     <meta name="description" content="ڕێبەری هاتوچۆ و ڕەبتی ڕاستەوخۆ بە GPSی ئۆتۆمبێل - فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦">
     <meta property="og:title" content="نەخشەی هاتوچۆی فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦">
-    <meta property="og:description" content="هێڵی شین بۆ چوون، هێڵی سوور بۆ گەڕانەوە (بامۆک، سیروان و سلێمانی)، بەستراو بە GPSی سەیارە">
+    <meta property="og:description" content="هێڵی شین بۆ چوون، هێڵی سوور بۆ گەڕانەوە (لە سیروان و بامۆکەوە بۆ سلێمانی)، بەستراو بە GPSی سەیارە">
     <meta property="og:image" content="1_Posteri_Reber_2026.jpg">
     <meta name="theme-color" content="#881337">
 
@@ -326,7 +326,7 @@
     <header class="header-card">
         <div class="badge">نەخشەی فەرمی هەڵەبجە ٢٠٢٦ 🌸</div>
         <h1 class="title">ڕێبەری هاتوچۆی فیستڤاڵی هەنار</h1>
-        <p class="subtitle">هێڵەکان بە تەواوی لەسەر قیری شەقامەکان بەستراونەتەوە بە GPSی سەیارە</p>
+        <p class="subtitle">ڕێگای دەرچوون لە ڕێگەی سیروان و گەڕەکی بامۆکەوە بۆ سلێمانی</p>
     </header>
 
     <!-- Car GPS Dashboard -->
@@ -350,9 +350,9 @@
         <div class="map-toolbar">
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
                 <button class="tool-btn active" id="btn-both" onclick="filterRoutes('both')">هەموو هێڵەکان</button>
-                <button class="tool-btn" id="btn-blue" onclick="filterRoutes('blue')">🔵 چوون (سیروان و خورماڵ)</button>
-                <button class="tool-btn" id="btn-red-sirwan" onclick="filterRoutes('red_sirwan')">🔴 گەڕانەوە بۆ سیروان</button>
-                <button class="tool-btn" id="btn-red-suly" onclick="filterRoutes('red_suly')">🔴 گەڕانەوە بۆ سلێمانی</button>
+                <button class="tool-btn" id="btn-blue" onclick="filterRoutes('blue')">🔵 چوون بەرەو فیستڤاڵ</button>
+                <button class="tool-btn" id="btn-red-sirwan" onclick="filterRoutes('red_sirwan')">🔴 دەرچوون لە سیروانەوە بۆ سلێمانی</button>
+                <button class="tool-btn" id="btn-red-suly" onclick="filterRoutes('red_suly')">🔴 دەرچوون لە بامۆکەوە بۆ سلێمانی</button>
             </div>
             <div style="display:flex; gap:6px;">
                 <button class="tool-btn" id="btn-google-sat" onclick="switchTileLayer('google_sat')">🛰️ گووگڵ مانگی دەستکرد</button>
@@ -367,11 +367,11 @@
     <div class="legend-grid">
         <div class="legend-card blue" onclick="filterRoutes('blue')">
             <div class="legend-title">🔵 هێڵی شین: چوون بۆ فیستڤاڵ</div>
-            <p>بە شەقامی سەرەکی سیروان و خورماڵ ڕێک دەچێتە ناو پارکی شار و یاریگا.</p>
+            <p>هاتن لە سلێمانی لە ڕێگەی سیروان و خورماڵەوە بەرەو شوێنی فیستڤاڵ (پارکی شار).</p>
         </div>
-        <div class="legend-card red" onclick="filterRoutes('red_all')">
-            <div class="legend-title">🔴 هێڵی سوور: گەڕانەوە (سیروان + سلێمانی)</div>
-            <p>دەرچوون بە گەڕەکی بامۆک: لقی یەکەم بەرەو سیروان، لقی دووەم بەرەو سلێمانی.</p>
+        <div class="legend-card red" onclick="filterRoutes('red_sirwan')">
+            <div class="legend-title">🔴 هێڵی سوور: سیروان ⬅️ سلێمانی</div>
+            <p>دەرچوون لە فیستڤاڵەوە بە شەقامی سیروان دەڕواتەوە بۆ شەقامی سەرەکی سلێمانی.</p>
         </div>
     </div>
 
@@ -380,13 +380,13 @@
         <h3>خستنەسەر شاشەی سەیارە (Android Auto / Apple CarPlay):</h3>
         <div class="btn-row">
             <a href="https://www.google.com/maps/dir/?api=1&destination=35.1764,45.9863&travelmode=driving" class="ext-btn btn-blue-nav" target="_blank">
-                🔵 چوون بەرەو فیستڤاڵ
+                🔵 چوون بۆ فیستڤاڵ
             </a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=35.2155,45.9180&travelmode=driving" class="ext-btn btn-red-nav" target="_blank">
-                🔴 دەرچوون بۆ سیروان
+            <a href="https://www.google.com/maps/dir/?api=1&destination=35.2900,45.8900&travelmode=driving" class="ext-btn btn-red-nav" target="_blank">
+                🔴 سیروان ⬅️ سلێمانی
             </a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=35.2100,46.0400&travelmode=driving" class="ext-btn btn-red-nav" target="_blank">
-                🔴 دەرچوون بۆ سلێمانی
+            <a href="https://www.google.com/maps/dir/?api=1&destination=35.2700,46.0200&travelmode=driving" class="ext-btn btn-red-nav" target="_blank">
+                🔴 بامۆک ⬅️ سلێمانی
             </a>
         </div>
     </div>
@@ -414,10 +414,10 @@
 
 <script>
     // Initialize Map with Google Maps Latest 2026 Hybrid Tiles
-    const halabjaCenter = [35.195, 45.980];
+    const halabjaCenter = [35.210, 45.960];
     const map = L.map('map', {
         center: halabjaCenter,
-        zoom: 13,
+        zoom: 12,
         zoomControl: false
     });
 
@@ -459,15 +459,14 @@
     const blueKhurmalPts = toLatLng(ROUTES_DATA.blue_khurmal);
 
     // 2. Red Routes (Exit)
-    const redSirwanPts = toLatLng(ROUTES_DATA.red_sirwan);
-    const redSulyPts = toLatLng(ROUTES_DATA.red_sulaymaniyah);
+    const redSirwanToSulyPts = toLatLng(ROUTES_DATA.red_sirwan_to_suly);
+    const redEastToSulyPts = toLatLng(ROUTES_DATA.red_east_to_suly);
 
     // Create Polylines snapped exactly to roads
-    // Glowing underline for high visibility
-    function createGlowLine(pts, color) {
+    function createGlowLine(pts) {
         return L.polyline(pts, {
             color: '#ffffff',
-            weight: 11,
+            weight: 10,
             opacity: 0.9,
             lineCap: 'round',
             lineJoin: 'round'
@@ -477,32 +476,32 @@
     function createMainLine(pts, color) {
         return L.polyline(pts, {
             color: color,
-            weight: 7,
+            weight: 6,
             opacity: 1,
             lineCap: 'round',
             lineJoin: 'round'
         });
     }
 
-    // Blue Lines
-    const glowBlue1 = createGlowLine(blueSirwanPts, '#ffffff').addTo(map);
+    // Blue Lines (Arrival)
+    const glowBlue1 = createGlowLine(blueSirwanPts).addTo(map);
     const mainBlue1 = createMainLine(blueSirwanPts, '#2563eb').addTo(map);
 
-    const glowBlue2 = createGlowLine(blueKhurmalPts, '#ffffff').addTo(map);
+    const glowBlue2 = createGlowLine(blueKhurmalPts).addTo(map);
     const mainBlue2 = createMainLine(blueKhurmalPts, '#2563eb').addTo(map);
 
-    // Red Lines
-    const glowRedSirwan = createGlowLine(redSirwanPts, '#ffffff').addTo(map);
-    const mainRedSirwan = createMainLine(redSirwanPts, '#dc2626').addTo(map);
+    // Red Lines (Exit)
+    const glowRedSirwan = createGlowLine(redSirwanToSulyPts).addTo(map);
+    const mainRedSirwan = createMainLine(redSirwanToSulyPts, '#dc2626').addTo(map);
 
-    const glowRedSuly = createGlowLine(redSulyPts, '#ffffff').addTo(map);
-    const mainRedSuly = createMainLine(redSulyPts, '#dc2626').addTo(map);
+    const glowRedEast = createGlowLine(redEastToSulyPts).addTo(map);
+    const mainRedEast = createMainLine(redEastToSulyPts, '#dc2626').addTo(map);
 
     // All layers group for zooming
     const allLayers = L.featureGroup([
-        mainBlue1, mainBlue2, mainRedSirwan, mainRedSuly
+        mainBlue1, mainBlue2, mainRedSirwan, mainRedEast
     ]);
-    map.fitBounds(allLayers.getBounds().pad(0.08));
+    map.fitBounds(allLayers.getBounds().pad(0.05));
 
     // Custom UI Markers
     function createCustomMarker(emoji, title, color) {
@@ -519,34 +518,29 @@
     // 1. Festival Ground
     L.marker([35.1764, 45.9863], {
         icon: createCustomMarker('🍎', 'شوێنی فیستڤاڵ (پارکی شار)', '#e11d48')
-    }).addTo(map).bindPopup("<b>شوێنی سەرەکی فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦</b><br>پارکی گشتی شار و یاریگای نەورۆز.");
+    }).addTo(map).bindPopup("<b>شوێنی سەرەکی فیستڤاڵی هەناری هەڵەبجە ٢٠٢٦</b><br>پارکی گشتی شار و یاریگا.");
 
-    // 2. Sirwan Entrance (Blue)
+    // 2. Sirwan Center
     L.marker([35.2155, 45.9180], {
-        icon: createCustomMarker('🔵', 'دەروازەی سیروان (چوون)', '#2563eb')
-    }).addTo(map).bindPopup("<b>دەروازەی سیروان:</b> ڕێگای هاتن بۆ ناو شار بەرەو فیستڤاڵ (هێڵی شین)");
+        icon: createCustomMarker('🏙️', 'ناوەندی سیروان', '#475569')
+    }).addTo(map).bindPopup("<b>سیروان:</b> هەردوو هێڵی چوون (شین) و گەڕانەوە (سوور) بەمێدا تێپەڕدەبن");
 
-    // 3. Khurmal Entrance (Blue)
+    // 3. Sirwan Exit towards Sulaimaniyah
+    L.marker([35.2900, 45.8900], {
+        icon: createCustomMarker('🔴', 'دەرچوون بۆ سلێمانی (سیروان)', '#dc2626')
+    }).addTo(map).bindPopup("<b>دەرچوون بە ڕێگای سیروان:</b> بەرەو سەیدسادق، عەربەت و سلێمانی");
+
+    // 4. East Exit towards Sulaimaniyah
+    L.marker([35.2700, 46.0200], {
+        icon: createCustomMarker('🔴', 'دەرچوون بۆ سلێمانی (بامۆک)', '#dc2626')
+    }).addTo(map).bindPopup("<b>دەرچوون بە ڕێگای ڕۆژهەڵات:</b> لە بامۆکەوە بەرەو شەقامی سلێمانی");
+
+    // 5. Khurmal Entrance
     L.marker([35.2520, 46.0310], {
         icon: createCustomMarker('🔵', 'دەروازەی خورماڵ (چوون)', '#2563eb')
-    }).addTo(map).bindPopup("<b>دەروازەی خورماڵ:</b> ڕێگای هاتن بۆ ناو شار بەرەو فیستڤاڵ (هێڵی شین)");
+    }).addTo(map);
 
-    // 4. Bamok Center (Exit Junction)
-    L.marker([35.1635, 45.9880], {
-        icon: createCustomMarker('🔴', 'گەڕەکی بامۆک (دەرچوون)', '#dc2626')
-    }).addTo(map).bindPopup("<b>گەڕەکی بامۆک:</b> هێڵی سووری دەرچوون - لێکترازانی ڕێگای سیروان و سلێمانی");
-
-    // 5. Sirwan Exit (Red)
-    L.marker([35.2130, 45.9150], {
-        icon: createCustomMarker('🔴', 'دەرچوون بەرەو سیروان', '#dc2626')
-    }).addTo(map).bindPopup("<b>ڕێگای دەرچوون:</b> گەڕانەوە بەرەو سیروان (هێڵی سوور)");
-
-    // 6. Sulaymaniyah Exit (Red)
-    L.marker([35.2100, 46.0400], {
-        icon: createCustomMarker('🔴', 'دەرچوون بۆ سلێمانی', '#dc2626')
-    }).addTo(map).bindPopup("<b>شەقامی سەرەکی:</b> بەستنەوە بە شەقامی سلێمانی - شارەزوور");
-
-    // 7. Parking 1 & 2
+    // 6. Parking 1 & 2
     L.marker([35.1750, 45.9830], {
         icon: createCustomMarker('🅿️', 'پارکینگی یاریگا', '#059669')
     }).addTo(map);
@@ -564,27 +558,24 @@
         });
 
         // Hide all first
-        [glowBlue1, mainBlue1, glowBlue2, mainBlue2, glowRedSirwan, mainRedSirwan, glowRedSuly, mainRedSuly].forEach(l => map.removeLayer(l));
+        [glowBlue1, mainBlue1, glowBlue2, mainBlue2, glowRedSirwan, mainRedSirwan, glowRedEast, mainRedEast].forEach(l => map.removeLayer(l));
 
         if (type === 'both') {
             document.getElementById('btn-both').classList.add('active');
-            [glowBlue1, mainBlue1, glowBlue2, mainBlue2, glowRedSirwan, mainRedSirwan, glowRedSuly, mainRedSuly].forEach(l => map.addLayer(l));
-            map.fitBounds(allLayers.getBounds().pad(0.08));
+            [glowBlue1, mainBlue1, glowBlue2, mainBlue2, glowRedSirwan, mainRedSirwan, glowRedEast, mainRedEast].forEach(l => map.addLayer(l));
+            map.fitBounds(allLayers.getBounds().pad(0.05));
         } else if (type === 'blue') {
             document.getElementById('btn-blue').classList.add('active');
             [glowBlue1, mainBlue1, glowBlue2, mainBlue2].forEach(l => map.addLayer(l));
-            map.fitBounds(L.featureGroup([mainBlue1, mainBlue2]).getBounds().pad(0.08));
+            map.fitBounds(L.featureGroup([mainBlue1, mainBlue2]).getBounds().pad(0.05));
         } else if (type === 'red_sirwan') {
             document.getElementById('btn-red-sirwan').classList.add('active');
             [glowRedSirwan, mainRedSirwan].forEach(l => map.addLayer(l));
-            map.fitBounds(mainRedSirwan.getBounds().pad(0.08));
+            map.fitBounds(mainRedSirwan.getBounds().pad(0.05));
         } else if (type === 'red_suly') {
             document.getElementById('btn-red-suly').classList.add('active');
-            [glowRedSuly, mainRedSuly].forEach(l => map.addLayer(l));
-            map.fitBounds(mainRedSuly.getBounds().pad(0.08));
-        } else if (type === 'red_all') {
-            [glowRedSirwan, mainRedSirwan, glowRedSuly, mainRedSuly].forEach(l => map.addLayer(l));
-            map.fitBounds(L.featureGroup([mainRedSirwan, mainRedSuly]).getBounds().pad(0.08));
+            [glowRedEast, mainRedEast].forEach(l => map.addLayer(l));
+            map.fitBounds(mainRedEast.getBounds().pad(0.05));
         }
     }
 
@@ -660,7 +651,7 @@
             btn.innerHTML = "<span>🚗 دەستپێکردنی ڕێپیشاندەر (GPS سەیارە)</span>";
             statusText.innerText = "سیستەمی GPSی سەیارە: ئامادەیە";
             document.getElementById('speed-display').innerText = "🚗 خێرایی: ٠ کم/ک";
-            map.fitBounds(allLayers.getBounds().pad(0.08));
+            map.fitBounds(allLayers.getBounds().pad(0.05));
         }
     }
 </script>
